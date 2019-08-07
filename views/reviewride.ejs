@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Leave a review</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="stars.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="/js/index.js"></script>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+</head>
+
+<body>
+
+  <!-- nav -->
+  <header id="masthead">
+    <div class="container">
+      <a href="/" id="logo">Hello User</a>
+      <nav>
+        <a href="#">About me</a>
+        <a href="/contact">Childcare</a>
+        <a href="/reviewride">Rides</a>
+        <a href="/contact">Contact</a>
+        <a href="/reviewride">Reviews</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--  nav -->
+
+  
+  
+  
+
+
+
+
+  <div id="main-container" class="container">
+    <section class="main-section">
+      <h1>Leave a review</h1>
+
+      <!-- https://formspree.io/Sumayyah.abdussaboor@ -->
+
+      <!-- this is the reviews page therefore we wont be sending email to owner rather just post comments on the page for them to read
+      at their convenience -->
+      
+
+      <form id="contact-form" action="" method="POST">
+        <ul>
+          <li>
+            <label for="email">First Name</label>
+            <input type="name" id="name" name="name" placeholder="" required="required">
+          </li>
+
+          <li>
+
+            <label for="name">Initial of Last Name</label>
+
+            <select id="mySelect1" class="scores">
+              <option>Select an Option</option>
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>D</option>
+              <option>E</option>
+              <option>F</option>
+              <option>G</option>
+              <option>H</option>
+              <option>I</option>
+              <option>J</option>
+              <option>K</option>
+              <option>L</option>
+              <option>M</option>
+              <option>N</option>
+              <option>O</option>
+              <option>P</option>
+              <option>Q</option>
+              <option>R</option>
+              <option>S</option>
+              <option>T</option>
+              <option>U</option>
+              <option>V</option>
+              <option>W</option>
+              <option>X</option>
+              <option>Y</option>
+              <option>Z</option>
+            </select>
+          </li>
+
+          <li>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
+          </li>
+
+          <label for="Ratings">Rating</label>
+          <div class="rate">
+            <input type="radio" id="star5" class="star" name="rate" value="5" />
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" class="star" name="rate" value="4" />
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" class="star" name="rate" value="3" />
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" class="star" name="rate" value="2" />
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" class="star" name="rate" value="1" />
+            <label for="star1" title="text">1 star</label>
+          </div>
+
+          <li>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required="required"></textarea>
+          </li>
+        </ul>
+        <!-- <input type="" id="submit"> -->
+        
+        <button id="submit">Submit</button>
+
+        
+
+      </form>
+      
+    </section>
+
+  </div>
+
+
+
+  <div id="comment-section">
+    <h1>Reviews</h1>
+    
+      <% comments.forEach(function(comment){  %>  
+
+        <ul style="margin-top: 10px;">
+          <li style="color: red; display: inline" ><%= comment.firstname %>  </li>
+          <li style="color: red; display: inline" ><%= comment.lastInitial %> , </li>
+          <li style="color: red; display: inline" ><%= comment.email %> , </li>
+          <img class="starrank"src="<%= comment.starRating %>" alt=""> 
+          <li style="color: red; background-color:rgb(24, 24, 24)"><%= comment.message %></li> 
+        </ul>
+        
+        <%  }) %>
+
+  </div>
+
+  
+
+  <footer>
+    <div class="container">
+      Copyright &copy;
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me!</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+ <!-- nav -->
+ <header id="masthead">
+    <div class="container">
+      <a href="/" id="logo">Hello User</a>
+      <nav>
+        <a href="#">About me</a>
+        <a href="/contact">Childcare</a>
+        <a href="/reviewride">Rides</a>
+        <a href="/contact">Contact</a>
+        <a href="/reviewride">Reviews</a>
+      </nav>
+    </div>
+  </header>
+
+
+ <!--  nav -->
+
+
+  <div id="main-container" class="container">
+    <section class="main-section">
+      <h1>Contact</h1>
+
+      <form id="contact-form" action="https://formspree.io/Sumayyah.abdussaboor@gmail.com" method="POST">
+        <ul>
+          <li>
+            <label for="text">Name</label>
+            <input type="text" id="name" name="name" placeholder="" required="required">
+          </li>
+          <li>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
+          </li>
+          <li>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="" required="required">
+          </li>
+          <li>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required="required"></textarea>
+          </li>
+        </ul>
+        <input type="submit">
+      </form>
+
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      Copyright &copy; 
+    </div>
+  </footer>
+</body>
+
+</html>
